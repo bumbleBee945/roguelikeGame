@@ -1,0 +1,11 @@
+Floor 1
+5 encounters
+5 enemies
+
+Floor 2
+5 encounters
+5 enemies
+
+Floor 3
+5 encounters
+5 enemies

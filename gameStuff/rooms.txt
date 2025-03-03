@@ -1,0 +1,34 @@
+
+
+
+Boss - it's a boss. Item upgrade pop-up before fighting.
+Gives (great artifact, great artifact, great artifact), (great item, great item), and 70-90 gold
+Brute - it's a strong enemy. Gives (good artifact, good artifact) and 30-45 gold
+Enemy - it's an enemy. Gives a base artifact every 3rd time, a base item, and 5-15 gold.
+
+
+Cache - Gives an item upgrade, good artifact, good item, and 40-50 gold.
+
+
+Store - Gives the option to purchase
+an item upgrade, 2 base artifacts, 3 good artifacts, 2 base items, and 3 base items.
+20% of the time Special Store - Gives the option to purchase
+an item upgrade, 2 good artifacts, 1 great artifact, 1 great item, and duplicate an artifact.
+
+
+Unknown - One of thirty unknown encounters. Cannot be the same one twice in a run.
+
+
+ERROR ROOM - One of four ERROR encounters.
+ERROR1 - 20% chance
+Choose to open the glitched chest, deleting one random artifact and one random item,
+                                   but giving you one random artifact and one random item.
+ERROR2 - 20% chance
+Choose to attack the glitched object, spawning three half-health brutes back-to-back.
+                                      Defeating them rewards (good artifact, base artifact, base artifact) x2, and 10-30 gold.
+ERROR3 - 20% chance
+Choose to climb the glitched ladder, completely regenerating the map and
+                                     bringing you to the first room. (non-identical map)
+ERROR4 - 40% chance
+Choose to offer to the glitched shrine, turning a chosen artifact and item
+                                        to their glitched variants.

@@ -1,0 +1,11 @@
+Floor 1
+12 encounters
+8 enemies
+
+Floor 2
+12 encounters
+8 enemies
+
+Floor 3
+12 encounters
+8 enemies
