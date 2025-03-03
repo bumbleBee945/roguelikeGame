@@ -1,1 +1,62 @@
-Unknown Room #1
+- Room of Echoes -
+Strange whispers guide your movement through the dungeon room.
+Out of the amalgamation of garbled murmurs, three voices remain distinct.
+One urges you to go forward, one urges you to retreat, and one tells you to wait.
+[Forward] [Retreat] [Wait]
+
+- Frostbound Hollow -
+As you enter the next room, you're suddenly chilled to the bone.
+Your body hardens, as you feel the frost inch deeper into your blood.
+[Leave] [Wait] [Forward]
+
+- The Gloomveil -
+Darkness envelops the room, heightening your other senses.
+You hear gears turning, machines clicking, and water rushing.
+[Gears] [Machines] [Water]
+
+- Mirror, Mirror -
+The room contains nothing, except three mirrors.
+The first mirror taunts you, implying you'll never leave the dungeon.
+The second mirror comforts you, urging you that it will all be okay.
+The third mirror is frightened, telling you to leave you must break one of them.
+[First] [Second] [Third]
+
+- Toxic Spores -
+As you enter, mushrooms begin growing on the ground at a rapid pace.
+They're purple, with yellow and green spots.
+[Leave] [Pick] [Wait]
+
+- Rotting Crypt -
+You see a tomb in the next room.
+[Leave] [Open]>>
+You open the tomb, as a skeleton appears with hand outstretched.
+[Fight] [Take Hand]>>
+The skeleton takes your hand in its own, and places a single pearl with its other.
+
+- Creeping Webs -
+The next room has a mess of sticky webs, with freshly-caught prey on them.
+Except, this prey isn't bugs and insects, but humans such as yourself.
+[Leave] [Slice the Webs]>>
+The webs seem to start avoiding your blade, as you're able to move further.
+You see the prey on the webs start to be more armored, and stronger.
+[Leave] [Slice Further]>>
+
+- The Broken Bell -
+In the room is one very large bell.
+[Leave] [Ring Bell (10+ Damage)]>> [Break Bell (20+ Damage)]>>>>
+Ring: You ring the bell, as it reverberates your entire body it drops its clapper.
+Break: You break the bell, shattering it and largely shaking the entire room. You pick up a bell shard.
+
+-  -
+
+- -
+
+- -
+
+- -
+
+- -
+
+- -
+
+- -
