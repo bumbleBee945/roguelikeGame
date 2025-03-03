@@ -1,11 +1,7 @@
 # Default ignored files
-/shelf/
-/workspace.xml
+workspace.xml
 .DS_Store
-
-# Specific to ignore
-*.xml
-*.iml
+.idea/
 
 # Compiled class file
 *.class
