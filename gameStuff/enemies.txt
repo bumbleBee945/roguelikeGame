@@ -1,11 +1,162 @@
-Floor 1
-12 encounters
-8 enemies
+    ---FLOOR 1---
+    ---FLOOR 1---
+    ---FLOOR 1---
 
-Floor 2
-12 encounters
-8 enemies
+Enemy: Wild Grub [20 HP] - Starts with slow, then random between the three
+- *3 Damage, *2 Slow
+- *6 Damage
+- +5 Block
+Enemy: Crazed Cultist [40 HP] - Starts with Strength, then random between the three
+- +3 Strength
+- *8 Damage
+- +5 Block
+Enemy: Sputtering Imp [30 HP] - Alternates, starting with attack
+- *7 Damage, *2 Vulnerable, +2 Vulnerable
+- +7 Block
+Enemy: Wandering Shade [20 HP] - Alternates, starting with dodge attack
+- *6 Damage, +1 Dodge
+- *10 Damage
+Enemy: Vexed Bat [20 HP] - Starts with lifesteal 5. Random moves
+- *6 Damage, *2 Vulnerable
+- *12 Damage
+Enemy: Green Ooze [15 HP] - Starts with a random status effect, then random between attack/block.
+- *2 Slow
+- *2 Weak
+- *6 Damage
+- +6 Block
+Enemy: Blue Ooze [20 HP] - Starts with a random status effect, then random between attack/block.
+- *3 Slow
+- *3 Weak
+- *9 Damage
+- +9 Block
+Enemy: Weird Ninja [20 HP] - Starts with dodge 2. Random moves.
+- *6 Damage
+- *8 Damage
+- *3 Damage, *2 Vulnerable
+Encounter [A] - "Oozes"
+Contains: Green Ooze, Blue Ooze
+Encounter [B] - "Imp"
+Contains: Sputtering Imp
+Encounter [C] - "Grubs"
+Contains: Wild Grub, Wild Grub
+Encounter [D] - "Crazed Cultist"
+Contains: Crazed Cultist
+Encounter [E] - "Vexed Bats"
+Contains: Vexed Bat, Vexed Bat
+Encounter [F] - "Ninja"
+Contains: Weird Ninja
+Encounter [G] - "Wandering Shade"
+Contains: Wandering Shade
+Appears in second half of floor 1 exclusively
+Encounter [H] - "More Grubs"
+Contains: Wild Grub, Wild Grub, Wild Grub
+Encounter [I] - "More Ooze"
+Contains: Green Ooze, Blue Ooze, Green Ooze
+Encounter [J] - "Cultists"
+Contains: Crazed Cultist, Crazed Cultist
 
-Floor 3
-12 encounters
-8 enemies
+    ---FLOOR 2---
+    ---FLOOR 2---
+    ---FLOOR 2---
+
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Encounter [A] Can Appear: () - ""
+Contains:
+Encounter [B] Can Appear: () - ""
+Contains:
+Encounter [C] Can Appear: () - ""
+Contains:
+Encounter [D] Can Appear: () - ""
+Contains:
+Encounter [E] Can Appear: () - ""
+Contains:
+Encounter [F] Can Appear: () - ""
+Contains:
+Encounter [G] Can Appear: () - ""
+Contains:
+Encounter [H] Can Appear: () - ""
+Contains:
+Encounter [I] Can Appear: () - ""
+Contains:
+Encounter [J] Can Appear: () - ""
+Contains:
+
+    ---FLOOR 3---
+    ---FLOOR 3---
+    ---FLOOR 3---
+
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Enemy: Name
+-
+-
+-
+Encounter [A] Can Appear: () - ""
+Contains:
+Encounter [B] Can Appear: () - ""
+Contains:
+Encounter [C] Can Appear: () - ""
+Contains:
+Encounter [D] Can Appear: () - ""
+Contains:
+Encounter [E] Can Appear: () - ""
+Contains:
+Encounter [F] Can Appear: () - ""
+Contains:
+Encounter [G] Can Appear: () - ""
+Contains:
+Encounter [H] Can Appear: () - ""
+Contains:
+Encounter [I] Can Appear: () - ""
+Contains:
+Encounter [J] Can Appear: () - ""
+Contains:

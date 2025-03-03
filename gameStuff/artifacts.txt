@@ -1,5 +1,56 @@
-15 base artifacts
-10 good artifacts
-5 great artifacts
-
+10 base artifacts
+8 good artifacts
+6 great artifacts
+Artis: 30-50, 70-100, 120-150
++ upgraded
++ glitched !! woah
 + costs for buying
+
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(b)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(g)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .
+(G)  {30g}        | .
+Upgrade: .      | Glitched: .

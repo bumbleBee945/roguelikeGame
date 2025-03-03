@@ -1,7 +1,68 @@
-12 base items
+10 base items
 8 good items
-4 great items
-
+6 great items
+Items: 15-40, 50-80, 90-130
 + upgraded
 + glitched !! woah
 + costs for buying
+
+(bA) Basic Active {35g} |
+Upgrade: . | Glitched: .
+(bA) Basic Active {35g} |
+Upgrade: . | Glitched: .
+(b) Crude Knife [1] {15g}    | Deal 6 damage.
+Upgrade: Deal 9 damage.      | Glitched: Deals 1d20 damage, costs 1d4 energy. Decided on combat start.
+(b) Healing Salve [2] {35g}  | Heal 5 health.
+Upgrade: Heal 8 health.      | Glitched: Heals 1d20 health, costs 1d6 energy. Decided on combat start.
+(b) Cool Boulder [2] {25g}   | Deal 9 damage.
+Upgrade: Deal 13 damage.     | Glitched: Randomizes enemy health.
+(b) Torch [2] {40g}          | Deal 6 damage and apply 2 Burning.
+Upgrade: Applies 3 Burning.  | Glitched: Deal 0, apply 8 Burning.
+(b) Cleansing Herbs [1] {30g}| Remove one negative status effect.
+Upgrade: Costs 0 energy.     | Glitched: Removes all status effects.
+(b) Cherry Tonic [2] {20g}   | Gain 1 Stubborn.
+Upgrade: Costs 1 energy.     | Glitched: Gain 10 Strength, gain 1 Relenting.
+(b) Sticky Bomb [2] {40g}    | After four turn ends, deal 25 damage.
+Upgrade: After three instead.| Glitched: After 1d12 turn ends, deal 1d100 damage.
+(b) Rat Tooth [1] {25g}      | Apply 3 Plague.
+Upgrade: Apply 5 Plague.     | Glitched: Apply double Plague.
+(b) Longbow [1] {25g}        | Deal 4 damage twice.
+Upgrade: Thrice.             | Glitched: Deal 3 damage six times.
+(b) Rusty Buckler [1] {20g}  | Gain 4 block and 2 Sturdy.
+Upgrade: 4 Sturdy.           | Glitched: Gain 0 block and 12 Sturdy.
+(gA) Good Active {70g} |
+Upgrade: . | Glitched: .
+(gA) Good Active {70g} |
+Upgrade: . | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(g)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(GA) Great Active {110g} |
+Upgrade: . | Glitched: .
+(GA) Great Active {110g} |
+Upgrade: . | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .
+(G)  [] {00g}   | .
+Upgrade: .     | Glitched: .

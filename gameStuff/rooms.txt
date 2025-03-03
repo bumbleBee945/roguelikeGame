@@ -1,5 +1,6 @@
 
-
+Items: 15-40, 50-80, 90-130
+Artis: 30-50, 70-100, 120-150
 
 Boss - it's a boss. Item upgrade pop-up before fighting.
 Gives (great artifact, great artifact, great artifact), (great item, great item), and 70-90 gold

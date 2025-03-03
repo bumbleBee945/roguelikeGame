@@ -1,0 +1,11 @@
+Slow: Gain one energy next turn, then reduce Slow by 1.
+Weak: Deal -50% damage with attacks. Reduces by one on turn end.
+Vulnerable: Take +50% damage from every source. Reduces by one on turn end.
+Strength: Deal +1 damage with attacks.
+Dodge: The next attack is negated. Reduces by one per negation or on turn end.
+Lifesteal: Heal for unblocked damage dealt. Reduces by one on turn end.
+Burning: Take 3 damage at the end of turn, then reduce Burning by 1.
+Stubborn: On turn end, gain 1 Strength.
+Relenting: On turn end, lose 1 Strength.
+Plague: On turn end, lose this much health, then reduce Plague by 1.
+Sturdy: Next time you are attacked, reduce the damage by this amount and remove Sturdy.
