@@ -1,19 +1,11 @@
-class RogueMain {
+public class RogueMain {
     public static void main(String[] args) {
-        int floor = 1;
-        String[] roomNames = initRoomNames();
-        int[][] roomArray = generateMap();
-        printMap(floor, roomNames, roomArray);
+        RogueMap floorMap = new RogueMap(1);
+        floorMap.generateMap();
+        floorMap.printMap();
     }
 
     static void printMap(int floor, String[] roomNames, int[][] roomArray) {
-        printMapTop(floor);
-        printBoss(roomArray[0][2], roomNames);
-        for (int i = 0; i < 7; i++) {
-            printRoutes(roomArray[i][0] - roomArray[i+1][0], roomArray[i][0]);
-            printRooms(roomArray[i+1], roomNames);
-        }
-        printMapBottom();
     }
 
     static String[] initRoomNames() {
@@ -22,14 +14,6 @@ class RogueMain {
                 "   Brute   ", "   Cache   ", "   Store   ",
                 " ???#?$!?? ", "   Error   ", "   Error   ", "  Boss  A  "
         };
-        /* Percentages
-        Enemy: 65%
-        Unknown: 12%
-        Brute: 10%
-        Cache: 8%
-        Store: 4%
-        ???#?$!??: 1%
-         */
     }
 
     static int[][] generateMap() {
