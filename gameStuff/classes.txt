@@ -1,0 +1,5 @@
+base class
+Starts with 3x crude knife
+Starts with 1x rusty buckler
+Starts with 1x heart-beater
+Starts with 80HP

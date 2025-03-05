@@ -47,16 +47,68 @@ In the room is one very large bell.
 Ring: You ring the bell, as it reverberates your entire body it drops its clapper.
 Break: You break the bell, shattering it and largely shaking the entire room. You pick up a bell shard.
 
--  -
+- Cursed Gallery -
+The next room is long, and somewhat narrow.
+Inside are several paintings, inside moving and warping.
+Which one do you inspect further?
+[Bowl of Fruit] [Abstract Shapes] [Royal Feast]
 
-- -
+- The Broken Idol -
+The next room has a pedestal, with a gold object on it.
+[Look Closer]>>
+A severed head of an unknown deity's statue lies before you.
+[Take It] [Walk Away]>>
+You avoid any risks and move forward.
+Head: Risky artifact
 
-- -
+- The True Idol - [Only appears from 1/3rd of unknown rooms when holding Idol Head]
+The net room has a pedestal, with a gold object on it.
+[Look Closer]>>
+A body of an unknown deity's statue lies before you.
+[Attach the Head]>>
+You attach the broken head, and the gold melts together.
+The deity's eyes glow red.
+[Take the Statue]
 
-- -
+- Blood Altar -
+A stone altar stained with fresh blood sits in the center of the next room.
+In the middle is a silver chalice, half-filled with blood.
+On the side, a makeshift knife with blood still dripping off.
+[Offer] [Desecrate] [Leave]>>
+You decide to leave what is.
+Offer: Lose maximum health, gain Divine Blessing. [Blessing]
+Desecrate: Gain Curse of Blood. [Vulnerable + Strength 2]
 
-- -
+- Sword Song -
+A weapon hums with an eerie melody, vibrating slightly.
+[Pick It Up] [Destroy It] [Leave It Alone]>>
+You decide that interacting with the object is too risky.
+Pick It Up: Obtain a Singing Sword.
+Destroy It: It turns into spiders and flies. Fight.
 
-- -
+- Dripping Ceiling -
+A bright liquid drips steadily from the above, seeping into the cracks below.
+[Taste It] [Collect It] [Walk Past]>>
+You avoid interacting with the mystery liquid.
+Taste It: Gain ten maximum health.
+Collect It: Gain a one-use item that heals an enemy for fifteen health.
 
-- -
+- Dripping Ceiling -
+A dark liquid drips steadily from the above, seeping into the cracks below.
+[Taste It] [Collect It] [Walk Past]>>
+You avoid interacting with the mystery liquid.
+Taste It: Lose ten maximum health.
+Collect It: Gain a one-use item that damage an enemy for fifteen health.
+
+- Melter's Melancholy -
+The room before you is lit with flickering, small flames.
+[Look Closer]>>
+The flames are from full candles, a puddle of melted wax below each.
+The wax seems to flow, with the candles never shortening.
+[Touch the Wax] [Blow Out the Candles] [Take a Candle]
+Touch: The wax crawls onto you, engulfing you. Gain a Wax Coat and five maximum health. [You can no longer be Burned.]
+Blow: The room darkens, as a hidden door on a far wall faintly glows.
+[Enter]
+Inside is a skeleton made of pure gold. The skull falls off and rolls towards you.
+[Take the Golden Skull] (Gain 50% more money)
+Take: Gain an Unending Candle item: 2 power, burns

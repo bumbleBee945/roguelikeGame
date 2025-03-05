@@ -6,51 +6,27 @@ Artis: 30-50, 70-100, 120-150
 + glitched !! woah
 + costs for buying
 
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(b)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(g)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
-(G)  {30g}        | .
-Upgrade: .      | Glitched: .
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(b)  {30g}        | . Glitched:
+(g) Heart-beater {85g}  | After combat, gain six health. Glitched: Gain 1d12 health instead.
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(g)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
+(G)  {30g}        | . Glitched:
