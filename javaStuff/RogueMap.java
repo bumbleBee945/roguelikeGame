@@ -10,9 +10,7 @@ public class RogueMap {
     private int[][] roomArray = new int[8][4];
 
     //constructor
-    public RogueMap(int floor) {
-        this.floor = floor;
-    }
+    public RogueMap(int floor) { this.floor = floor; }
 
     //methods
     public void printMap() {
@@ -26,7 +24,10 @@ public class RogueMap {
     }
 
     public void generateMap() {
-        roomArray[0] = {1, -1, 9, -1}; //boss room
+        roomArray[0][0] = 1;
+        roomArray[0][1] = -1;
+        roomArray[0][2] = 9;
+        roomArray[0][1] = -1;
         int[] roomsAdded = new int[7];
         int roomNum;
         boolean validMap = false;
@@ -67,7 +68,18 @@ public class RogueMap {
         }
     }
 
-    static void printRooms(int[] rooms) {
+    private int randomRoom() {
+        int percent = 1 + (int)(Math.random() * 100);
+        if (percent <= 65) return 1;
+        else if (percent <= 77) return 2;
+        else if (percent <= 87) return 3;
+        else if (percent <= 95) return 4;
+        else if (percent <= 99) return 5;
+        else if (percent == 100) return 6;
+        else return 0;
+    }
+
+    private void printRooms(int[] rooms) {
         switch (rooms[0]) {
             case 4:
                 System.out.printf(
@@ -99,7 +111,7 @@ public class RogueMap {
         }
     }
 
-    static void printRoutes(int type, int rooms) {
+    private void printRoutes(int type, int rooms) {
         switch (type) {
             case 3:
                 System.out.print("    |                                  ╲               |               ╱                                  |\n" +
@@ -144,7 +156,7 @@ public class RogueMap {
         }
     }
 
-    static void printBoss(int bossNum) {
+    private void printBoss(int bossNum) {
         System.out.printf(
                 "    |                                  [===============================]                                  |\n" +
                         "    |                                  |                               |                                  |\n" +
@@ -153,14 +165,14 @@ public class RogueMap {
                         "    |                                  [===============================]                                  |\n", this.roomNames[bossNum]);
     }
 
-    static void printMapTop() {
+    private void printMapTop() {
         System.out.printf(
                 "\n\n    |-----------------------------------------------------------------------------------------------------|\n" +
                         "    |                                              Floor  %d                                               |\n" +
                         "    |                                                                                                     |\n", this.floor);
     }
 
-    static void printMapBottom() {
+    private void printMapBottom() {
         System.out.print(
                 "    |                                                                                                     |\n" +
                         "    |-----------------------------------------------------------------------------------------------------|\n\n");
