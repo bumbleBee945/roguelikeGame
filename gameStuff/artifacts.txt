@@ -6,27 +6,28 @@ Artis: 30-50, 70-100, 120-150
 + glitched !! woah
 + costs for buying
 
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(b)  {30g}        | . Glitched:
-(g) Heart-beater {85g}  | After combat, gain six health. Glitched: Gain 1d12 health instead.
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(g)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
-(G)  {30g}        | . Glitched:
+(b) [MED] Rusted Medal    {40g} | Start each combat with 1 Strength. Glitched:
+(b) [CLO] Tattered Cloak  {40g} | Start each combat with 3 Block. Glitched:
+(b) [TOX] Toxic Fang      {40g} | Apply 1 Plague when dealing unblocked damage. Glitched:
+(b) [VIG] Vigor Charm     {40g} | Gain 1 extra Block when using a Block item. Glitched:
+(b) [BER] Berserker Brew  {40g} | Gain 2 Strength when below 50% health. Glitched:
+(b) [IVN] IV Needle       {40g} | Heal 1 health when defeating an enemy. Glitched:
+(b) [SWI] Swift Shoes     {40g} | Gain 1 Energy every third turn start. Glitched:
+(b) [HAR] Hardened Shell  {40g} | Reduce the first instance of damage taken each combat by 2. Glitched:
+(b) [COI] Phantom Coin    {40g} | When you would gain gold, gain 2 extra. Glitched:
+(b) [SPI] Spiked Shoulder {40g} | When you are hit, deal 2 damage to your attacker. Glitched:
+(g) [HEA] Heart-beater    {85g} | After combat, gain four health. Glitched: Gain 1d12 health instead.
+(g) [BLA] Blaze Burner    {85g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(g) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:
+(G) [XXX] 123456789012345 {30g} | . Glitched:

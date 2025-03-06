@@ -3,6 +3,7 @@ Stubborn: On turn end, gain 1 Strength.
 Relenting: On turn end, lose 1 Strength.
 Sturdy: Next time you are attacked, reduce the damage by this amount and remove Sturdy.
 Blessing: Lose 1 health less from the next attack this turn.
+Block: When attacked, negate damage by the amount of block, and reduce block. Lose all on turn end.
 
 Reduces by one every turn end:
 Weak: Deal -50% damage with attacks. Reduces by one on turn end.
