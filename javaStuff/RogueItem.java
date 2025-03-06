@@ -32,6 +32,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "  Small Stone  ";
                 this.name = " Stone ";
+                this.effect = "                                                               ";
                 this.goldCost = 40;
                 this.energyCost = -1;
                 break;
@@ -39,12 +40,14 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "  Gold  Peach  ";
                 this.name = " Peach ";
+                this.effect = "                                                               ";
                 this.goldCost = 40;
                 this.energyCost = -1;
             case "KNI":
                 this.tier = "base";
                 this.longName = "  Crude Knife  ";
                 this.name = " Knife ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -52,6 +55,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = " Healing Salve ";
                 this.name = " Salve ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 2;
                 break;
@@ -59,6 +63,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = " Cool  Boulder ";
                 this.name = "Boulder";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 2;
                 break;
@@ -66,6 +71,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "Torch";
                 this.name = " Torch ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 2;
                 break;
@@ -73,6 +79,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "Cleansing Herbs";
                 this.name = " Herbs ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -80,6 +87,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = " Cherry  Tonic ";
                 this.name = " Tonic ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 2;
                 break;
@@ -87,6 +95,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "  Sticky Bomb  ";
                 this.name = "S. Bomb";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 2;
                 break;
@@ -94,6 +103,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "   Rat Tooth   ";
                 this.name = " Tooth ";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -101,6 +111,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "    Longbow    ";
                 this.name = "Longbow";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -108,6 +119,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = " Rusty Buckler ";
                 this.name = "Buckler";
+                this.effect = "                                                               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -125,5 +137,71 @@ public class RogueItem {
                 this.energyCost = ;
                 break;*/
         }
+    }
+    public void display() {
+        System.out.printf("\n\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                           %s                                           |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                     You are displaying an item.                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                       To exit, press 'Enter'.                                       |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                              Item Name                                              |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |       [=======================================|===========================|=================]       |\n" +
+                        "    |       |                                       |                           |                 |       |\n" +
+                        "    |       |           \"%s\"           |        \"%s\"        |      [%s]      |       |\n" +
+                        "    |       |                                       |                           |                 |       |\n" +
+                        "    |       [=======================================|===========================|=================]       |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                           Artifact Effect                                           |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |       [=====================================================================================]       |\n" +
+                        "    |       |                                   %s                                   |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |           %s           |       |\n" +//63 char
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       |                                                                                     |       |\n" +
+                        "    |       [=====================================================================================]       |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                                Specs                                                |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |       [==========================================|==========================================]       |\n" +
+                        "    |       |                   Cost                   |                  Rarity                  |       |\n" +
+                        "    |       |                                          |                                          |       |\n" +
+                        "    |       |                   %3dg                   |       %s      |       |\n" +
+                        "    |       |                                          |                                          |       |\n" +
+                        "    |       |                                          |                                          |       |\n" +
+                        "    |       [=====================================================================================]       |\n" +
+                        "    |                                                                                                     |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n" +
+                        "    |                                                Exit:                                                |\n" +
+                        "    |                                               [Enter]                                               |\n" +
+                        "    |-----------------------------------------------------------------------------------------------------|\n\n",
+                this.longName, this.longName, this.name, this.code, this.longName, this.effect, this.goldCost,
+                (this.tier.equals("base") ? "[Base]      Good       Great " :
+                        (this.tier.equals("good") ? " Base      [Good]      Great " : " Base       Good      [Great]")));
     }
 }

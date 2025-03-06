@@ -20,6 +20,25 @@ public class RoguePlayer {
     }
 
     //methods
+    public void displayItem(int slot) { this.itemInventory[slot].display(); }
+    public void displayArtifact(int slot) { this.artifactInventory[slot].display(); }
+    public int findItem(String code2) {
+        for (int i = 0; i < 6; i++)
+            if ((this.itemInventory[i] != null) && (this.itemInventory[i].getCode().equals(code2)))
+                return i;
+        return -1;
+    }
+    public int findArtifact(String code2) {
+        System.out.print("Finding artifact "+code2+" / ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("For loop " + i + " / ");
+            if ((this.artifactInventory[i] != null) && (this.artifactInventory[i].getCode().equals(code2))) {
+                System.out.print("Returning i / ");
+                return i;
+            }
+        }
+        return -1;
+    }
 
     //accessors
     public int getHealth() { return this.health; }

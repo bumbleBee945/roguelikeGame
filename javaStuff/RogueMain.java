@@ -12,9 +12,9 @@ public class RogueMain {
         boolean exitProgram = false;
         while (exitProgram == false) {
             while (true) {
-                System.out.print("[1] Print Map\n[2] Oozes\n[3] Crazed Cultist\n[4] Generate Map\n[5] Exit Program\n[-] ");
+                System.out.print("[1] Print Map\n[2] Oozes\n[3] Crazed Cultist\n[4] Crazed Cultist x3\n[5] Generate Map\n[6] Exit Program\n[-] ");
                 givenValue = input.nextLine();
-                if (!givenValue.matches("[1-5]")) {
+                if (!givenValue.matches("[1-6]")) {
                     System.out.print("That input is invalid. It must be 1, 2, 3, 4, or 5.\n");
                     continue;
                 }
@@ -38,10 +38,15 @@ public class RogueMain {
                     givenValue = input.nextLine();
                     break;
                 case 4:
-                    floorMap.generateMap();
-                    System.out.print("Map generated.\n");
+                    combat = new RogueCombat("crazedCultist3", player);
+                    System.out.print("[-] ");
+                    givenValue = input.nextLine();
                     break;
                 case 5:
+                    floorMap.generateMap();
+                    System.out.print("\n\nMap generated.\n\n\n");
+                    break;
+                case 6:
                     exitProgram = true;
                     break;
             }

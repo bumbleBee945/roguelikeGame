@@ -1,8 +1,12 @@
+import java.util.Scanner;
+
 public class RogueCombat {
     //attributes
     private int enemyCount;
     private int round;
     private int turn;
+    private String givenValue;
+    private Scanner input = new Scanner(System.in);
     private String[] charArray = new String[18];
     private RogueEnemy[] enemy = new RogueEnemy[3];
 
@@ -10,9 +14,65 @@ public class RogueCombat {
     public RogueCombat(String combatID, RoguePlayer player) {
         initCombat(combatID);
         printGUI(player);
+        System.out.print("[-] ");
+        while (true) {
+            givenValue = input.nextLine();
+            if (!givenValue.matches("...") || (returnAction(givenValue, player) == "none")) {
+                printGUI(player);
+                System.out.print("[x] Invalid input  [-] ");
+                continue;
+            }
+            break;
+        }
+        doAction(returnAction(givenValue, player), givenValue, player);
     }
 
     //methods
+    private void doAction(String type, String code, RoguePlayer player) {
+        switch (type) {
+            case "end":
+                break;
+            case "active":
+                break;
+            case "player":
+                break;
+            case "enemy":
+                break;
+            case "item":
+                player.displayItem(player.findItem(code));
+                System.out.print("[=] ");
+                givenValue = input.nextLine();
+                printGUI(player);
+                break;
+            case "artifact":
+                System.out.print("Case artifact / ");
+                player.displayArtifact(player.findArtifact(code));
+                System.out.print("[=] ");
+                givenValue = input.nextLine();
+                printGUI(player);
+                break;
+        }
+    }
+
+    private String returnAction(String code, RoguePlayer player) {
+        if (code.equals("END"))
+            return "end";
+        if (code.equals("ACT"))
+            return "active";
+        if (code.equals("ME"))
+            return "player";
+        for (int i = 0; i < enemyCount; i++)
+            if (enemy[i].getCode() == code)
+                return "enemy";
+        for (int i = 0; i < 6; i++)
+            if (player.findItem(code) != -1)
+                return "item";
+        for (int i = 0; i < 10; i++)
+            if (player.findArtifact(code) != -1)
+                return "artifact";
+        return "none";
+    }
+
     private void initCombat(String combatID) {
         this.round = 1;
         this.turn = 0;
@@ -20,6 +80,12 @@ public class RogueCombat {
             case "crazedCultist":
                 this.enemyCount = 1;
                 enemy[0] = new RogueEnemy("CUL");
+                break;
+            case "crazedCultist3":
+                this.enemyCount = 3;
+                enemy[0] = new RogueEnemy("CUL");
+                enemy[1] = new RogueEnemy("CUL");
+                enemy[2] = new RogueEnemy("CUL");
                 break;
             case "oozes":
                 this.enemyCount = 2;
@@ -41,28 +107,24 @@ public class RogueCombat {
     private void setCharArray() {
         for (int i = 0; i < 18; i++)
             charArray[i] = "                            ";
-        switch (this.enemyCount) {
-            case 1:
-                setCharArrayStrings(5, 3);
-                break;
-            case 2:
-                setCharArrayStrings(1, 1);
-                break;
-            case 3:
-                setCharArrayStrings(0, 0);
-                break;
+        int start = 0;
+        int plus = 0;
+        if (this.enemyCount == 1) {
+            start = 5;
+            plus = 3;
+        } else if (this.enemyCount == 2) {
+            start = 1;
+            plus = 1;
         }
-    }
-    private void setCharArrayStrings(int start, int plus) {
-        for (int j = start, i = 0; i < enemyCount; i++) {
-            charArray[j++] = "|--------------------------|";
-            charArray[j++] = String.format("| %s |", enemy[i].getName()); //24 char
-            charArray[j++] = "|--------------------------|";
-            j += plus;
-            charArray[j++] = String.format("   [INTENT] (%s)   ", enemy[i].getIntentEffect());
-            charArray[j++] = String.format("     [HEALTH] (%3d/%-3d)     ", enemy[i].getHealth(), enemy[i].getMaxHealth());
-            charArray[j] = "          [      ]          ";
-            j += (plus + plus + plus);
+        for (int i = 0; i < enemyCount; i++) {
+            charArray[start++] = String.format("|----------%s--%d----------|", enemy[i].getCode(), i+1);
+            charArray[start++] = String.format("| %s |", enemy[i].getName());
+            charArray[start++] = "|--------------------------|";
+            start += plus;
+            charArray[start++] = String.format("   [INTENT] (%s)   ", enemy[i].getIntentEffect());
+            charArray[start++] = String.format("     [HEALTH] (%3d/%-3d)     ", enemy[i].getHealth(), enemy[i].getMaxHealth());
+            charArray[start++] = "          [      ]          ";
+            start += (plus + plus);
         }
     }
 
@@ -77,7 +139,7 @@ public class RogueCombat {
                 "    |--------------------------------------------------|--------------------------------------------------|\n" +
                 "    |                                                  |           %s           |\n" +
                 "    |                Me, Myself, and I.                |           %s           |\n" +
-                "    |           |--------------------------|           |           %s           |\n" +
+                "    |           |------------ME------------|           |           %s           |\n" +
                 "    |           |                          |           |           %s           |\n" +
                 "    |           |                          |           |           %s           |\n" +
                 "    |           |                          |           |           %s           |\n" +
@@ -186,6 +248,7 @@ class RogueEnemy {
 
     //accessors
     public String getName() { return this.name; }
+    public String getCode() { return this.code; }
     public int getHealth() { return this.health; }
     public int getMaxHealth() { return this.maxHealth; }
     public String getIntentEffect() { return this.intentEffect; }
