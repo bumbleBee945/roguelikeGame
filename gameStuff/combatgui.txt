@@ -100,7 +100,7 @@
     |                                                  |
     |                                                  |
     |                                                  |
-    |               [INTENT] (Attack *7)               |
+    |              [INTENT] (Attack * 7 )              |
     |                [HEALTH] ( 60/60 )                |
     |                     [      ]                     |
     |                                                  |

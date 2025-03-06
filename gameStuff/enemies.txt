@@ -6,7 +6,7 @@ Enemy: Wild Grub [20 HP] - Starts with slow, then random between the three
 - *3 Damage, *2 Slow
 - *6 Damage
 - +5 Block
-Enemy: Crazed Cultist [40 HP] - Starts with Strength, then random between the three
+[CUL]: Crazed Cultist [40 HP] - Starts with Strength, then random between the three
 - +3 Strength
 - *8 Damage
 - +5 Block
