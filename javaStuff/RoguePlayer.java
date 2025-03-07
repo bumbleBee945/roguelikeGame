@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class RoguePlayer {
 
     //attributes
@@ -6,9 +8,9 @@ public class RoguePlayer {
     private int maxEnergy;
     private int energy;
     private RogueItem activeItem;
-    private RogueItem[] itemInventory = new RogueItem[6];
-    private RogueArtifact[] artifactInventory = new RogueArtifact[10];
-    private String[] statusArray;
+    private ArrayList<RogueItem> itemInventory = new ArrayList<>();
+    private ArrayList<RogueArtifact> artifactInventory = new ArrayList<>();
+    private ArrayList<RogueStatus> statusList = new ArrayList<>();
 
     //constructor
     public RoguePlayer() {
@@ -20,23 +22,18 @@ public class RoguePlayer {
     }
 
     //methods
-    public void displayItem(int slot) { this.itemInventory[slot].display(); }
-    public void displayArtifact(int slot) { this.artifactInventory[slot].display(); }
+    public void displayItem(int slot) { this.itemInventory.get(slot).display(); }
+    public void displayArtifact(int slot) { this.artifactInventory.get(slot).display(); }
     public int findItem(String code2) {
-        for (int i = 0; i < 6; i++)
-            if ((this.itemInventory[i] != null) && (this.itemInventory[i].getCode().equals(code2)))
+        for (int i = 0; i < itemInventory.size(); i++)
+            if ((this.itemInventory.get(i) != null) && (this.itemInventory.get(i).getCode().equals(code2)))
                 return i;
         return -1;
     }
     public int findArtifact(String code2) {
-        System.out.print("Finding artifact "+code2+" / ");
-        for (int i = 0; i < 10; i++) {
-            System.out.print("For loop " + i + " / ");
-            if ((this.artifactInventory[i] != null) && (this.artifactInventory[i].getCode().equals(code2))) {
-                System.out.print("Returning i / ");
+        for (int i = 0; i < artifactInventory.size(); i++)
+            if ((this.artifactInventory.get(i) != null) && (this.artifactInventory.get(i).getCode().equals(code2)))
                 return i;
-            }
-        }
         return -1;
     }
 
@@ -47,33 +44,102 @@ public class RoguePlayer {
     public int getMaxEnergy() { return this.maxEnergy; }
     public String getActiveItemLongName() { return this.activeItem.getLongName(); }
     public String getActiveItemEffect() { return this.activeItem.getEffect(); }
-    public String getItemCode(int slot) { return this.itemInventory[slot].getCode(); }
-    public String getItemName(int slot) { return this.itemInventory[slot].getName(); }
-    public String getItemLongName(int slot) { return this.itemInventory[slot].getLongName(); }
-    public String getItemEffect(int slot) { return this.itemInventory[slot].getEffect(); }
-    public int getItemEnergyCost(int slot) { return this.itemInventory[slot].getEnergyCost(); }
-    public String getArtifactCode(int slot) { return this.artifactInventory[slot].getCode(); }
-    public String getArtifactName(int slot) { return this.artifactInventory[slot].getName(); }
-    public String getArtifactLongName(int slot) { return this.artifactInventory[slot].getLongName(); }
-    public String getArtifactEffect(int slot) { return this.artifactInventory[slot].getEffect(); }
-    public boolean hasItem(int slot) { return (this.itemInventory[slot] != null); }
+    public String getItemCode(int slot) { return this.itemInventory.get(slot).getCode(); }
+    public String getItemName(int slot) { return this.itemInventory.get(slot).getName(); }
+    public String getItemLongName(int slot) { return this.itemInventory.get(slot).getLongName(); }
+    public String getItemEffect(int slot) { return this.itemInventory.get(slot).getEffect(); }
+    public int getItemEnergyCost(int slot) { return this.itemInventory.get(slot).getEnergyCost(); }
+    public String getArtifactCode(int slot) { return this.artifactInventory.get(slot).getCode(); }
+    public String getArtifactName(int slot) { return this.artifactInventory.get(slot).getName(); }
+    public String getArtifactLongName(int slot) { return this.artifactInventory.get(slot).getLongName(); }
+    public String getArtifactEffect(int slot) { return this.artifactInventory.get(slot).getEffect(); }
+    public boolean hasItem(int slot) { return (this.itemInventory.size() > slot); }
     public boolean hasActiveItem() { return (this.activeItem != null); }
-    public boolean hasArtifact(int slot) { return (this.artifactInventory[slot] != null); }
+    public boolean hasArtifact(int slot) { return (this.artifactInventory.size() > slot); }
+
+    //mutators
 
     //initializers
     private void initInventory() {
         this.activeItem = new RogueItem("POC");
-        this.itemInventory[0] = new RogueItem("KNI");
-        this.itemInventory[1] = new RogueItem("BOW");
-        this.itemInventory[2] = new RogueItem("SAL");
-        this.itemInventory[3] = new RogueItem("STI");
-        this.itemInventory[4] = new RogueItem("HER");
-        this.artifactInventory[0] = new RogueArtifact("MED");
-        this.artifactInventory[1] = new RogueArtifact("CLO");
-        this.artifactInventory[2] = new RogueArtifact("TOX");
-        this.artifactInventory[3] = new RogueArtifact("VIG");
-        this.artifactInventory[4] = new RogueArtifact("BER");
-        this.artifactInventory[5] = new RogueArtifact("IVN");
-        this.artifactInventory[6] = new RogueArtifact("HEA");
+        this.itemInventory.add(new RogueItem("KNI"));
+        this.itemInventory.add(new RogueItem("BOW"));
+        this.itemInventory.add(new RogueItem("SAL"));
+        this.itemInventory.add(new RogueItem("STI"));
+        this.itemInventory.add(new RogueItem("HER"));
+        this.artifactInventory.add(new RogueArtifact("MED"));
+        this.artifactInventory.add(new RogueArtifact("CLO"));
+        this.artifactInventory.add(new RogueArtifact("TOX"));
+        this.artifactInventory.add(new RogueArtifact("VIG"));
+        this.artifactInventory.add(new RogueArtifact("BER"));
+        this.artifactInventory.add(new RogueArtifact("IVN"));
+        this.artifactInventory.add(new RogueArtifact("HEA"));
+        this.statusList.add(new RogueStatus(RogueStatus.getStatus("VUL"), 4));
+        this.statusList.add(new RogueStatus(RogueStatus.getStatus("STR"), 2));
+    }
+
+    //methods
+    public void display() {
+        String[] tempArray = new String[8];
+        for (int i = 0; i < 8; i++)
+            tempArray[i] = "                                                    |       |\n" +
+                    "    |       |                                                                                     |       |";
+        for (int i = 0; i < statusList.size(); i++)
+            tempArray[i] = String.format("%10s (%d)                                      |       |\n    |       |   %s: %s  |       |",
+                statusList.get(i).getStatusType(), statusList.get(i).getStatusNum(), statusList.get(i).getStatusCode(), statusList.get(i).getStatusDescription());
+        System.out.printf("\n\n" +
+                "    |-----------------------------------------------------------------------------------------------------|\n" +
+                "    |                                           Player Statuses                                           |\n" +
+                "    |-----------------------------------------------------------------------------------------------------|\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                              You are displaying your current statuses.                              |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                       To exit, press 'Enter'.                                       |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |-----------------------------------------------------------------------------------------------------|\n" +
+                "    |                                         Status Effect List                                          |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |       |                                 %s\n" +
+                "    |       [=====================================================================================]       |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |                                                                                                     |\n" +
+                "    |-----------------------------------------------------------------------------------------------------|\n" +
+                "    |                                                Exit:                                                |\n" +
+                "    |                                               [Enter]                                               |\n" +
+                "    |-----------------------------------------------------------------------------------------------------|\n\n",
+                tempArray[0], tempArray[1], tempArray[2], tempArray[3], tempArray[4], tempArray[5], tempArray[6], tempArray[7]);
     }
 }

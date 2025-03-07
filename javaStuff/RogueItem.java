@@ -1,15 +1,8 @@
-public class RogueItem {
+public class RogueItem extends RoguePickup {
 
     //attributes
-    private String tier;
-    private String longName;
-    private String name;
-    private String effect;
-    private String code;
-    private int goldCost;
     private int energyCost;
     private boolean upgraded;
-    private boolean glitched;
     private String modifier;
 
     //constructor
@@ -19,10 +12,6 @@ public class RogueItem {
     }
 
     //accessors
-    public String getCode() { return this.code; }
-    public String getLongName() { return this.longName; }
-    public String getName() { return this.name; }
-    public String getEffect() { return this.effect; }
     public int getEnergyCost() { return this.energyCost; }
 
     //methods
@@ -79,7 +68,7 @@ public class RogueItem {
                 this.tier = "base";
                 this.longName = "Cleansing Herbs";
                 this.name = " Herbs ";
-                this.effect = "                                                               ";
+                this.effect = "              Remove one negative status effect.               ";
                 this.goldCost = 25;
                 this.energyCost = 1;
                 break;
@@ -137,71 +126,5 @@ public class RogueItem {
                 this.energyCost = ;
                 break;*/
         }
-    }
-    public void display() {
-        System.out.printf("\n\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                           %s                                           |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                     You are displaying an item.                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                       To exit, press 'Enter'.                                       |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                              Item Name                                              |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |       [=======================================|===========================|=================]       |\n" +
-                        "    |       |                                       |                           |                 |       |\n" +
-                        "    |       |           \"%s\"           |        \"%s\"        |      [%s]      |       |\n" +
-                        "    |       |                                       |                           |                 |       |\n" +
-                        "    |       [=======================================|===========================|=================]       |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                           Artifact Effect                                           |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |       [=====================================================================================]       |\n" +
-                        "    |       |                                   %s                                   |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |           %s           |       |\n" +//63 char
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       |                                                                                     |       |\n" +
-                        "    |       [=====================================================================================]       |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                                Specs                                                |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |       [==========================================|==========================================]       |\n" +
-                        "    |       |                   Cost                   |                  Rarity                  |       |\n" +
-                        "    |       |                                          |                                          |       |\n" +
-                        "    |       |                   %3dg                   |       %s      |       |\n" +
-                        "    |       |                                          |                                          |       |\n" +
-                        "    |       |                                          |                                          |       |\n" +
-                        "    |       [=====================================================================================]       |\n" +
-                        "    |                                                                                                     |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n" +
-                        "    |                                                Exit:                                                |\n" +
-                        "    |                                               [Enter]                                               |\n" +
-                        "    |-----------------------------------------------------------------------------------------------------|\n\n",
-                this.longName, this.longName, this.name, this.code, this.longName, this.effect, this.goldCost,
-                (this.tier.equals("base") ? "[Base]      Good       Great " :
-                        (this.tier.equals("good") ? " Base      [Good]      Great " : " Base       Good      [Great]")));
     }
 }

@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class RogueMain {
+
     public static void main(String[] args) {
+        RogueStatus.initStatuses();
         RogueMap floorMap = new RogueMap(1);
         RoguePlayer player = new RoguePlayer();
         RogueCombat combat;
@@ -24,22 +26,22 @@ public class RogueMain {
             switch (givenInt) {
                 case 1:
                     floorMap.printMap();
-                    System.out.print("[-] ");
+                    System.out.print("[=] ");
                     givenValue = input.nextLine();
                     break;
                 case 2:
                     combat = new RogueCombat("oozes", player);
-                    System.out.print("[-] ");
+                    System.out.print("[=] ");
                     givenValue = input.nextLine();
                     break;
                 case 3:
                     combat = new RogueCombat("crazedCultist", player);
-                    System.out.print("[-] ");
+                    System.out.print("[=] ");
                     givenValue = input.nextLine();
                     break;
                 case 4:
                     combat = new RogueCombat("crazedCultist3", player);
-                    System.out.print("[-] ");
+                    System.out.print("[=] ");
                     givenValue = input.nextLine();
                     break;
                 case 5:
