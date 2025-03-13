@@ -1,0 +1,29 @@
+code: [CUL]
+name: [ Crazed Cultist ]
+maxhp: 40
+hp: 40
+moveset:
+	0: status, STR, 3, Self
+	1: attack, 8
+	2: block, 5
+	type: 0:1, 12:+
+code: [BOO]
+name: [   Blue  Ooze   ]
+maxhp: 20
+hp: 20
+moveset:
+	0: status, SLW, 3
+	1: status, WEA, 3
+	2: attack, 9
+	3: block, 9
+	type: 01:1, 23:+
+code: [GOO]
+name: [   Green Ooze   ]
+maxhp: 15
+hp: 15
+moveset:
+	0: status, SLW, 2
+	1: status, WEA, 2
+	2: attack, 6
+	3: block, 6
+	type: 01:1, 23:+

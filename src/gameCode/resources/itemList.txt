@@ -1,0 +1,87 @@
+code: [KNI]
+name: [ Knife ]
+longName: [  Crude Knife  ]
+effect: [                        Deal 6 damage.                         ]
+tier: [base]
+cost: 25
+energy: 1
+
+code: [SAL]
+name: [ Salve ]
+longName: [ Healing Salve ]
+effect: [                        Heal 5 health.                         ]
+tier: [base]
+cost: 25
+energy: 2
+
+code: [BOU]
+name: [Boulder]
+longName: [ Cool  Boulder ]
+effect: [                        Deal 9 damage.                         ]
+tier: [base]
+cost: 25
+energy: 2
+
+code: [HER]
+name: [ Herbs ]
+longName: [Cleansing Herbs]
+effect: [              Remove one negative status effect.               ]
+tier: [base]
+cost: 25
+energy: 1
+
+code: [BUC]
+name: [Buckler]
+longName: [ Rusty Buckler ]
+effect: [                  Gain 4 Block and 2 Sturdy.                   ]
+tier: [base]
+cost: 25
+energy: 1
+
+code: [TOR]
+name: [ Torch ]
+longName: [     Torch     ]
+effect: [              Deal 6 damage and apply 2 Burning.               ]
+tier: [base]
+cost: 25
+energy: 2
+
+code: [TON]
+name: [ Tonic ]
+longName: [ Cherry  Tonic ]
+effect: [63]
+tier: []
+cost: 
+energy: 
+
+code: [STI]
+name: [S. Bomb]
+longName: [  Sticky Bomb  ]
+effect: [     After four turns end, deal 15 damage to all enemies.      ]
+tier: [base]
+cost: 25
+energy: 2
+
+code: [RAT]
+name: [ Tooth ]
+longName: [   Rat Tooth   ]
+effect: [                        Apply 3 Plague.                        ]
+tier: [base]
+cost: 25
+energy: 1
+
+code: [BOW]
+name: [Longbow]
+longName: [    Longbow    ]
+effect: [                     Deal 4 damage twice.                      ]
+tier: [base]
+cost: 25
+energy: 1
+
+code: []
+name: [7]
+longName: [15]
+effect: [63]
+tier: []
+cost: 
+energy: 
