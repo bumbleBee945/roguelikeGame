@@ -11,7 +11,9 @@ public class gameMain {
         gamePlayer player = new gamePlayer();
         gameMap map = new gameMap(floor, player);
         map.generate();
+        System.out.print("generate");
         for (int i = 0; i < 4; i++) {
+            System.out.print(i);
             while (player.getLevel() != 7) {
                 map.display();
             }

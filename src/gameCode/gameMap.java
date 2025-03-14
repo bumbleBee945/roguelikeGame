@@ -97,7 +97,7 @@ public class gameMap {
     }
     public void move(int option) {
         player.setRoom(player.getLevel()+1, option);
-        display();
+        printAll();
         System.out.print("[=] ");
         input.nextLine();
     }

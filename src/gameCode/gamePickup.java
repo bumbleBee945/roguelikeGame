@@ -66,7 +66,7 @@ public abstract class gamePickup {
         else
             System.out.printf("    |%50sYou are displaying an artifact.%50s|\n", "", "");
         System.out.print(String.format("    |%131s|\n", "").repeat(4));
-        System.out.printf("    |%60sExit: [ESC]%60s|\n", "", "");
+        System.out.printf("    |%59sExit: [Enter]%59s|\n", "", "");
         System.out.print(String.format("    |%131s|\n", "").repeat(7));
     }
     private void printName() {
@@ -118,7 +118,7 @@ public abstract class gamePickup {
     private void printBottom() {
         System.out.printf("    |%s|\n", "-".repeat(131));
         System.out.printf("    |%60sEnd Display%60s|\n", "", "");
-        System.out.printf("    |%63s[ESC]%63s|\n", "", "");
+        System.out.printf("    |%62s[Enter]%62s|\n", "", "");
         System.out.printf("    |%s|\n", "-".repeat(131));
     }
 }
