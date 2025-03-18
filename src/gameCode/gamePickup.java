@@ -16,14 +16,14 @@ public abstract class gamePickup {
     //constructors
 
     //accessors
-    public boolean isNull() { return this.name.equals("null"); }
-    public String getTier() { return this.tier; }
-    public String getName() { return this.name; }
-    public String getLongName() { return this.longName; }
-    public String getEffect() { return this.effect; }
-    public String getCode() { return this.code; }
-    public int getCost() { return this.cost; }
-    public boolean isGlitched() { return this.glitched; }
+    public boolean isNull() { return name.equals("null"); }
+    public String getTier() { return tier; }
+    public String getName() { return name; }
+    public String getLongName() { return longName; }
+    public String getEffect() { return effect; }
+    public String getCode() { return code; }
+    public int getCost() { return cost; }
+    public boolean isGlitched() { return glitched; }
 
     //mutators
     public void setNull() { this.name = "null"; }
@@ -47,16 +47,12 @@ public abstract class gamePickup {
         input.nextLine();
     }
     private void printAll() {
-        printTop();
+        gameMain.printTop(getLongName());
         printMain();
         printName();
         printEffect();
         printSpecs();
-        printBottom();
-    }
-    private void printTop() {
-        System.out.printf("\n\n    |%s|\n", "-".repeat(131));
-        System.out.printf("    |%57sMe, Myself, and I%57s|\n", "", "");
+        gameMain.printBottom("End Display", "[Enter]");
     }
     private void printMain() {
         System.out.printf("    |%s|\n", "-".repeat(131));
@@ -114,11 +110,5 @@ public abstract class gamePickup {
         System.out.printf("    |       |%57s|%57s|       |\n", "", "");
         System.out.printf("    |       [%s|%s]       |\n", "=".repeat(57), "=".repeat(57));
         System.out.printf("    |%131s|\n", "");
-    }
-    private void printBottom() {
-        System.out.printf("    |%s|\n", "-".repeat(131));
-        System.out.printf("    |%60sEnd Display%60s|\n", "", "");
-        System.out.printf("    |%62s[Enter]%62s|\n", "", "");
-        System.out.printf("    |%s|\n", "-".repeat(131));
     }
 }

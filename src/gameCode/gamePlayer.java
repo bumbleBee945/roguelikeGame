@@ -3,14 +3,18 @@ package gameCode;
 import java.util.Scanner;
 import java.util.ArrayList;
 
+import static gameCode.gameMain.midFormat;
+
 public class gamePlayer extends gameCharacter {
     //attributes
     int level;
     int room;
     int maxEnergy;
     int energy;
+    int gold;
     boolean isCombat;
     gameCombat combat;
+    int baseCombats;
     gameItem active;
     Scanner input = new Scanner(System.in);
     ArrayList<gameItem> itemInv = new ArrayList<>();
@@ -22,13 +26,25 @@ public class gamePlayer extends gameCharacter {
     }
 
     //accessors
-    public int getLevel() { return this.level; }
-    public int getRoom() { return this.room; }
-    public int getMaxEnergy() { return this.maxEnergy; }
-    public int getEnergy() { return this.energy; }
-    public boolean isCombat() { return this.isCombat; }
-    public gameCombat getCombat() { return this.combat; }
+    public int getLevel() { return level; }
+    public int getRoom() { return room; }
+    public int getMaxEnergy() { return maxEnergy; }
+    public int getEnergy() { return energy; }
+    public boolean isCombat() { return isCombat; }
+    public gameCombat getCombat() { return combat; }
     public boolean hasActive() { return !this.active.isNull(); }
+    public gameItem getItem(String code) {
+        for (gameItem e : itemInv)
+            if (e.getCode().equals(code)) return e;
+        return null;
+    }
+    public gameArtifact getArtifact(String code) {
+        for (gameArtifact e : artifactInv)
+            if (e.getCode().equals(code)) return e;
+        return null;
+    }
+    public int getBaseCombats() { return baseCombats; }
+    public int getGold() { return gold; }
 
     //mutators
     public void setRoom(int level, int room) {
@@ -42,9 +58,39 @@ public class gamePlayer extends gameCharacter {
     public void setActive(gameItem active) { this.active = active; }
     public void addItem(String code) { this.itemInv.add(new gameItem(code)); }
     public void addArtifact(String code) { this.artifactInv.add(new gameArtifact(code)); }
+    public void setBaseCombats(int baseCombats) { this.baseCombats = baseCombats; }
+    public void addGold(int gold) { this.gold += gold; }
 
     //methods
-    private String returnAction(String action) {
+    public String use(gameItem item, gameCharacter target) {
+        if (item.getEnergy() > getEnergy())
+            return "energy";
+        else if (item.isUsed())
+            for (gameItem e : itemInv)
+                if (item.getCode().equals(e.getCode()) && !e.isUsed())
+                    item = e;
+        if (item.isUsed())
+            return "out";
+        energy -= item.getEnergy();
+        switch (item.getCode()) {
+            case "KNI":
+                target.subHealth(6);
+                break;
+            case "SAL":
+                target.addHealth(5);
+                break;
+        }
+        item.setUsed(true);
+        return String.format("used:%s:%s", item.getLongName(), target.getName());
+    }
+    public void replenish() {
+        energy = maxEnergy;
+        for (gameItem e : itemInv)
+            e.setUsed(false);
+
+    }
+
+    public String returnAction(String action) {
         switch (action) {
             case "END": return "end";
             case "ACT": return "active";
@@ -68,19 +114,19 @@ public class gamePlayer extends gameCharacter {
 
     //initializers
     private void initialize() {
+        setName("Me, Myself, & I");
         setRoom(-1, 0);
+        setBaseCombats(0);
         setMaxEnergy(3);
         setMaxHealth(80);
         setHealth(80);
         setIsCombat(false);
         setActive(new gameItem());
         addItem("KNI");
-        addItem("HER");
-        addItem("SAL");
-        addArtifact("BER");
-        addArtifact("SWI");
-        addArtifact("COI");
-        addArtifact("SPI");
+        addItem("KNI");
+        addItem("KNI");
+        addItem("BUC");
+        addArtifact("HEA");
     }
 
     //displays
@@ -115,17 +161,12 @@ public class gamePlayer extends gameCharacter {
         }
     }
     private void printAll() {
-        printTop();
+        gameMain.printTop("Me, Myself, and I");
         printMain();
         printActive();
         printArtifacts();
         printItems();
-        printBottom();
-    }
-    private void printTop() {
-        System.out.print("\n\n" +
-                         "    |-----------------------------------------------------------------------------------------------------------------------------------|\n" +
-                         "    |                                                         Me, Myself, and I                                                         |\n");
+        gameMain.printBottom("End Display", "[ESC]");
     }
     private void printMain() {
         System.out.printf("    |%s|\n", "-".repeat(131));
@@ -147,15 +188,20 @@ public class gamePlayer extends gameCharacter {
                     "", getMaxEnergy(), getEnergy(), "", getMaxHealth(), getHealth(), "");
             System.out.printf("    |%131s|\n", "");
         } else {
-            System.out.print(String.format("    |%131s|\n", "").repeat(5));
+            System.out.print(String.format("    |%131s|\n", "").repeat(3));
             System.out.printf("    |%51sYou are displaying yourself.%52s|\n", "", "");
             System.out.print(String.format("    |%131s|\n", "").repeat(4));
             System.out.printf("    |%60sExit: [ESC]%60s|\n", "", "");
-            System.out.print(String.format("    |%131s|\n", "").repeat(7));
+            System.out.print(String.format("    |%131s|\n", "").repeat(3));
+            System.out.printf("    |%s|\n", "-".repeat(131));
+            System.out.printf("    |%s|\n", midFormat("Gold", 131));
+            System.out.printf("    |%131s|\n", "");
+            System.out.printf("    |%s|\n", midFormat(String.format("%-3sG", gold), 131));
+            System.out.printf("    |%131s|\n", "");
         }
     }
-    private void printActive() {
-        System.out.printf("    |-----------------------------------------------------------------------------------------------------------------------------------|\n" +
+    public void printActive() {
+        System.out.printf("    |-----------------------------------------------------------------%s-----------------------------------------------------------------|\n" +
                          "    |                                                            Active Item                                                            |\n" +
                          "    |                                                               %5s                                                               |\n" +
                          "    |       [=============================|=====================================================================================]       |\n" +
@@ -164,9 +210,10 @@ public class gamePlayer extends gameCharacter {
                          "    |       |                             |                                                                                     |       |\n" +
                          "    |       [=============================|=====================================================================================]       |\n" +
                          "    |                                                                                                                                   |\n",
-                         (isCombat() ? "[ACT]" : ""), (hasActive() ? active.getLongName() : ""), (hasActive() ? active.getEffect() : ""));
+                        (isCombat() && combat.getAction().equals("playerTurn") ? "|" : "-"), (isCombat() ? "[ACT]" : ""),
+                        (hasActive() ? active.getLongName() : ""), (hasActive() ? active.getEffect() : ""));
     }
-    private void printArtifacts() {
+    public void printArtifacts() {
         System.out.print("    |-----------------------------------------------------------------------------------------------------------------------------------|\n" +
                          "    |                                                             Artifacts                                                             |\n" +
                          "    |                                                                                                                                   |\n" +
@@ -187,36 +234,31 @@ public class gamePlayer extends gameCharacter {
         System.out.print("    |       [===================================================================================================================]       |\n" +
                          "    |                                                                                                                                   |\n");
     }
-    private void printItems() {
+    public void printItems() {
     System.out.print("    |-----------------------------------------------------------------------------------------------------------------------------------|\n" +
                      "    |                                                               Items                                                               |\n" +
                      "    |                                                                                                                                   |\n" +
                      "    |       [===================================================================================================================]       |\n" +
                      "    |       |                                                                                                                   |       |\n" +
-                     "    |       |       ");
-    for (int i = 0; i < itemInv.size(); i++) //if item exists, print top
+                     "    |       |      ");
+    int i ;
+    for (i = 0; i < itemInv.size(); i++) //if item exists, print top
         System.out.printf("[---%3s---]  %s", itemInv.get(i).getCode(), (i == 3 ? " " : ""));
-    for (int i = 0; i < (8 - itemInv.size()); i++) //if item does not exist, print top
+    for ( ; i < 8; i++) //if item does not exist, print top
         System.out.printf("[---------]  %s", (i == 3 ? " " : ""));
-    System.out.print("   |       |\n    |       |       ");
-    for (int i = 0; i < itemInv.size(); i++) //if item exists, print middle
+    System.out.print("    |       |\n    |       |      ");
+    for (i = 0; i < itemInv.size(); i++) //if item exists, print middle
         System.out.printf("| %s |  %s", itemInv.get(i).getName(), (i == 3 ? " " : ""));
-    for (int i = 0; i < (8 - itemInv.size()); i++) //if item does not exist, print middle
+    for ( ; i < 8; i++) //if item does not exist, print middle
         System.out.printf("|         |  %s", (i == 3 ? " " : ""));
-    System.out.print("   |       |\n    |       |       ");
-    for (int i = 0; i < itemInv.size(); i++)
+    System.out.print("    |       |\n    |       |      ");
+    for (i = 0; i < itemInv.size(); i++)
         System.out.printf("[---%s---]  %s", itemInv.get(i).isUsed() ? "OUT" : "("+itemInv.get(i).getEnergy()+")", (i == 3 ? " " : ""));
-    for (int i = 0; i < (8 - itemInv.size()); i++)
+    for ( ; i < 8; i++)
         System.out.printf("[---------]  %s", (i == 3 ? " " : ""));
-    System.out.print("   |       |\n" +
+    System.out.print("    |       |\n" +
                      "    |       |                                                                                                                   |       |\n" +
                      "    |       [===================================================================================================================]       |\n" +
                      "    |                                                                                                                                   |\n");
-    }
-    private void printBottom() {
-        System.out.print("    |-----------------------------------------------------------------------------------------------------------------------------------|\n" +
-                         "    |                                                            End Display                                                            |\n" +
-                         "    |                                                               [ESC]                                                               |\n" +
-                         "    |-----------------------------------------------------------------------------------------------------------------------------------|\n\n");
     }
 }

@@ -1,14 +1,14 @@
 code: [CUL]
-name: [ Crazed Cultist ]
+name: [Crazed  Cultist]
 maxhp: 40
 hp: 40
 moveset:
 	0: status, STR, 3, Self
 	1: attack, 8
 	2: block, 5
-	type: 0:1, 12:+
+	type: 0:1, 012:+
 code: [BOO]
-name: [   Blue  Ooze   ]
+name: [   Blue Ooze   ]
 maxhp: 20
 hp: 20
 moveset:
@@ -18,7 +18,7 @@ moveset:
 	3: block, 9
 	type: 01:1, 23:+
 code: [GOO]
-name: [   Green Ooze   ]
+name: [  Green  Ooze  ]
 maxhp: 15
 hp: 15
 moveset:
@@ -27,3 +27,23 @@ moveset:
 	2: attack, 6
 	3: block, 6
 	type: 01:1, 23:+
+code: [TEA]
+name: [   Test nOne   ]
+maxhp: 15
+hp: 15
+moveset:
+	0: attack, 6
+	1: attack, 7
+	2: attack, 8
+	3: attack, 9
+	type: 01:2, 23:+
+code: [TEB]
+name: [   Test nTwo   ]
+maxhp: 20
+hp: 18
+moveset:
+	0: attack, 3
+	1: attack, 5
+	2: attack, 7
+	3: attack, 10
+	type: 0123:+

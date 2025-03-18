@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class gameItem extends gamePickup {
     //attributes
-    boolean used;
+    boolean used; 
     int energy;
 
     //constructors
@@ -17,8 +17,8 @@ public class gameItem extends gamePickup {
     }
 
     //accessors
-    public boolean isUsed() { return this.used; }
-    public int getEnergy() { return this.energy; }
+    public boolean isUsed() { return used; }
+    public int getEnergy() { return energy; }
 
     //mutators
     public void setUsed(boolean used) { this.used = used; }
@@ -51,7 +51,7 @@ public class gameItem extends gamePickup {
         next = reader.nextLine();
         setEffect(next.substring(9, 72));
         next = reader.nextLine();
-        setTier(next.substring(7, next.length()-1));
+        setTier(next.substring(7));
         next = reader.nextLine();
         setCost(Integer.parseInt(next.substring(6))); //set cost from index 6 onwards as int
         next = reader.nextLine();

@@ -1,7 +1,12 @@
 package gameCode;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
+
+import static gameCode.gameMain.random;
 
 public class gameRoom {
     //attributes
@@ -20,11 +25,11 @@ public class gameRoom {
     }
 
     //accessors
-    public boolean isNull() { return this.type.equals("null"); }
-    public String getName() { return this.name; }
-    public String getType() { return this.type; }
-    public int getEnemyCount() { return this.enemy.size(); }
-    public String getEnemy(int index) { return this.enemy.get(index); }
+    public boolean isNull() { return type.equals("null"); }
+    public String getName() { return name; }
+    public String getType() { return type; }
+    public int getEnemyCount() { return enemy.size(); }
+    public String getEnemy(int index) { return enemy.get(index); }
 
     //mutators
     public void setNull() { this.type = "null"; }
@@ -33,8 +38,24 @@ public class gameRoom {
 
     //methods
     private void randomEncounter() {
-        enemy.add("BOO");
-        enemy.add("GOO");
+        Scanner reader;
+        String next = "";
+        //set scanner for encounterList.txt
+        try {
+            if (type.equals("enemy"))
+                reader = new Scanner(new File("resources/encounterListEnemy.txt"));
+            else if (type.equals("brute"))
+                reader = new Scanner(new File("resources/encounterListEnemy.txt"));
+            else
+                reader = new Scanner(new File("resources/encounterListEnemy.txt"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        int num = random(1, 4);
+        for (int i = 0; i < num; i++)
+            next = reader.nextLine();
+        for (String e : next.split(", "))
+            enemy.add(e);
     }
 
     //initializers
@@ -50,6 +71,7 @@ public class gameRoom {
                 break;
             case "brute":
                 setName("   Brute   ");
+                randomEncounter();
                 break;
             case "cache":
                 setName("   Cache   ");
@@ -62,6 +84,7 @@ public class gameRoom {
                 break;
             case "bossA":
                 setName("  Boss  A  ");
+                randomEncounter();
                 break;
         }
         if (name.isEmpty())

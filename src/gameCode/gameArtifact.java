@@ -44,7 +44,7 @@ public class gameArtifact extends gamePickup {
         next = reader.nextLine();
         setEffect(next.substring(9, 72));
         next = reader.nextLine();
-        setTier(next.substring(7, next.length()-1));
+        setTier(next.substring(7));
         next = reader.nextLine();
         setCost(Integer.parseInt(next.substring(6))); //set cost from index 6 onwards as int
     }

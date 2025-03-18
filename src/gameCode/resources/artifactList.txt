@@ -2,75 +2,75 @@ code: [MED]
 name: [ R.Medal ]
 longName: [ Rusted  Medal ]
 effect: [              Start each combat with 1 Strength.               ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [CLO]
 name: [ T.Cloak ]
 longName: [Tattered  Cloak]
 effect: [                Start each combat with 3 Block.                ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [TOX]
 name: [ T. Fang ]
 longName: [  Toxic  Fang  ]
 effect: [         Apply 1 Plague when dealing unblocked damage.         ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [VIG]
 name: [ V.Charm ]
 longName: [  Vigor Charm  ]
 effect: [               When you gain Block, gain 1 more.               ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [BER]
 name: [ B. Brew ]
 longName: [Berserker  Brew]
 effect: [            Gain 2 Strength when below 50% health.             ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [IVN]
 name: [IV Needle]
 longName: [   IV Needle   ]
 effect: [            Heal 1 health when defeating an enemy.             ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [SWI]
 name: [ S.Shoes ]
 longName: [  Swift Shoes  ]
 effect: [             Gain 1 Energy every third turn start.             ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [HAR]
 name: [ H.Shell ]
 longName: [Hardened  Shell]
 effect: [  The first time you take damage each combat, reduce it by 2.  ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [COI]
 name: [ P. Coin ]
 longName: [ Phantom  Coin ]
 effect: [               When you gain gold, gain 2 more.                ]
-tier: [base]
+tier: base
 cost: 40
 
 code: [SPI]
 name: [Spiked S.]
 longName: [Spiked Shoulder]
 effect: [    When you are attacked, deal 2 damage to your attacker.     ]
-tier: [base]
+tier: base
 cost: 40
 
-code: []
-name: [7]
-longName: [15]
-effect: [63]
-tier: []
-cost: 
+code: [HEA]
+name: [Heartbeat]
+longName: [ Heart-beater  ]
+effect: [                After combat, heal four health.                ]
+tier: good
+cost: 85

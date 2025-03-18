@@ -2,6 +2,8 @@ package gameCode;
 
 import java.util.Scanner;
 
+import static gameCode.gameMain.random;
+
 public class gameMap {
     //attributes
     private Scanner input = new Scanner(System.in);
@@ -18,7 +20,7 @@ public class gameMap {
     }
 
     //accessors
-    public int getFloor() { return this.floor; }
+    public int getFloor() { return floor; }
 
     //mutators
     public void setFloor(int floor) { this.floor = floor; }
@@ -40,7 +42,7 @@ public class gameMap {
             numAmount[3]++; // make 0/4 count like there's one more
             for (int i = 0; i < 7; i++) { // generate rooms
                 do {
-                    roomNum = 1 + (int) (Math.random() * 4); // count of rooms 2-4
+                    roomNum = random(1, 4); // count of rooms 1-4
                     numAmount[roomNum-1]++;
                 } while ((i > 0) && ((roomNum-count[i-1] == 3) || (roomNum-count[i-1] == -3))); // if roomNum/count are 4 and 1
                 for (int j = 0; j < 4; j++) // add all rooms for a tier
@@ -86,7 +88,7 @@ public class gameMap {
     }
     private gameRoom randomRoom() {
         String type;
-        int percent = 1 + (int)(Math.random() * 100);
+        int percent = random(1, 100);
         if (percent <= 65) type = "enemy";
         else if (percent <= 77) type = "unknown";
         else if (percent <= 87) type = "brute";
@@ -105,8 +107,10 @@ public class gameMap {
         gameRoom current = room[player.getLevel()][player.getRoom()];
         switch (current.getType()) {
             case "enemy":
-                gameCombat combat = new gameCombat(current, player);
-                combat.combat();
+                new gameCombat(current, player).combat();
+                break;
+            case "brute":
+                new gameCombat(current, player).combat();
                 break;
         }
     }
